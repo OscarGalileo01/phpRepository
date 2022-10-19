@@ -7,16 +7,17 @@
     session_start();
 
     // Comprobar si existe contador de visitas
-    if(isset($_SESSION["contVisitas"])){
+    if(!isset($_SESSION["contVisitas"])){
         //Incremento valor
-        $_SESSION["contVisitas"] ++;
+        $_SESSION["visita"][1] = date("d-m-Y H:i:s");
     }else{
         //Creamos contador
-        $_SESSION["contVisitas"] = 1;
+        $_SESSION["visitas"][count($_SESSION["visita"]) + 1] = date("d-m-Y H:i:s");
     }
 
 
     echo "Has visitado la web {$_SESSION['contVisitas']}";
+   // foreach($_SESSION["visita"]);
 
 
 
