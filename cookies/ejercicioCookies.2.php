@@ -17,6 +17,7 @@
 
 
     echo "Has visitado la web {$_SESSION['contVisitas']}";
+    echo "HOLA";
    // foreach($_SESSION["visita"]);
 
 
